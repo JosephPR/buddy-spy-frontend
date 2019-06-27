@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import TodoForm from './components/TodoForm.js'
 import TodoContainer from './components/TodoContainer.js'
+import Clock from './components/Clock/Clock'
+import Navbar from './components/Navbar'
 import './App.css';
 
 export default class App extends Component {
@@ -44,6 +46,8 @@ export default class App extends Component {
 render (){
   return (
     <div className="App">
+      <Navbar />
+      <Clock />
       <h1>GitMoney Todo App</h1>
       <TodoForm postTodos={this.postTodos}/>
       {this.state.todos
